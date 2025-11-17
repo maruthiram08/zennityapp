@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zennity - Mobile Credit Card Deals App</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .app-title {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--primary-orange);
+            margin-bottom: 10px;
+        }
+        .tagline {
+            font-size: 20px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+        .description {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .brand-colors {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        .color-swatch {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-card);
+        }
+        .screens-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .screen-link {
+            background: white;
+            padding: 25px;
+            border-radius: var(--radius-card);
+            box-shadow: var(--shadow-card);
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: all 0.2s;
+            border: 2px solid transparent;
+        }
+        .screen-link:hover {
+            box-shadow: var(--shadow-card-hover);
+            border-color: var(--primary-orange);
+            transform: translateY(-2px);
+        }
+        .screen-number {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--primary-orange);
+            margin-bottom: 8px;
+        }
+        .screen-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .screen-description {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        .features {
+            background: white;
+            padding: 30px;
+            border-radius: var(--radius-card);
+            box-shadow: var(--shadow-card);
+            margin-top: 40px;
+        }
+        .features h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        .feature-item {
+            padding: 12px 0;
+            border-bottom: 1px solid #F0F0F0;
+            font-size: 15px;
+            color: var(--text-secondary);
+        }
+        .feature-item:last-child {
+            border-bottom: none;
+        }
+        .feature-item::before {
+            content: "✓";
+            color: var(--success-green);
+            font-weight: 700;
+            margin-right: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="app-title">Zennity</h1>
+            <p class="tagline">"Never Miss a Deal"</p>
+            <p class="description">
+                A modern, mobile-first credit card deals app designed for iOS, targeting credit card enthusiasts in India.
+                Discover the best credit card offers, track your progress, and maximize your rewards with our intelligent stacking calculator.
+            </p>
+            <div class="brand-colors">
+                <div class="color-swatch" style="background: #FF6B35;" title="Primary Orange"></div>
+                <div class="color-swatch" style="background: #5856D6;" title="Secondary Purple"></div>
+                <div class="color-swatch" style="background: #34C759;" title="Success Green"></div>
+                <div class="color-swatch" style="background: #FF9500;" title="Warning Orange"></div>
+                <div class="color-swatch" style="background: #FF3B30;" title="Alert Red"></div>
+            </div>
+        </div>
+
+        <!-- Screens Grid -->
+        <div class="screens-grid">
+            <a href="screen1-feed.html" class="screen-link">
+                <div class="screen-number">SCREEN 1</div>
+                <h3 class="screen-title">Feed Screen</h3>
+                <p class="screen-description">
+                    Browse hot deals, transfer bonuses, and welcome offers with time-sensitive badges and easy tracking options.
+                </p>
+            </a>
+
+            <a href="screen2-card-detail.html" class="screen-link">
+                <div class="screen-number">SCREEN 2</div>
+                <h3 class="screen-title">Card Detail</h3>
+                <p class="screen-description">
+                    View active offers, card stats, and quick actions for each credit card in your portfolio.
+                </p>
+            </a>
+
+            <a href="screen3-tracker.html" class="screen-link">
+                <div class="screen-number">SCREEN 3</div>
+                <h3 class="screen-title">My Tracker</h3>
+                <p class="screen-description">
+                    Track your progress on active deals, monitor spending goals, and manage upcoming actions with visual progress bars.
+                </p>
+            </a>
+
+            <a href="screen4-offers.html" class="screen-link">
+                <div class="screen-number">SCREEN 4</div>
+                <h3 class="screen-title">Offers Browser</h3>
+                <p class="screen-description">
+                    Explore trending offers across categories including stacking hacks, bank bonuses, and miles sales.
+                </p>
+            </a>
+
+            <a href="screen5-calculator.html" class="screen-link">
+                <div class="screen-number">SCREEN 5</div>
+                <h3 class="screen-title">Stacking Calculator</h3>
+                <p class="screen-description">
+                    Calculate maximum returns by stacking multiple offers, cards, and portals for optimal value.
+                </p>
+            </a>
+
+            <a href="screen6-portfolio.html" class="screen-link">
+                <div class="screen-number">SCREEN 6</div>
+                <h3 class="screen-title">Cards Portfolio</h3>
+                <p class="screen-description">
+                    Manage your credit card collection with quick access to offers, fee due dates, and card details.
+                </p>
+            </a>
+        </div>
+
+        <!-- Features -->
+        <div class="features">
+            <h2>Design Features</h2>
+            <ul class="feature-list">
+                <li class="feature-item">Mobile-first iOS design with iPhone 14 Pro dimensions (393 x 852 pt)</li>
+                <li class="feature-item">Clean, card-based UI with generous white space and subtle shadows</li>
+                <li class="feature-item">SF Pro font family throughout for native iOS feel</li>
+                <li class="feature-item">Vibrant color system with Orange primary, Purple secondary, and status colors</li>
+                <li class="feature-item">Bottom tab navigation with 5 main sections</li>
+                <li class="feature-item">Time-sensitive deal badges (Hot, Transfer Bonus, Welcome Offer)</li>
+                <li class="feature-item">Progress tracking with visual progress bars</li>
+                <li class="feature-item">Intelligent stacking calculator for maximizing returns</li>
+                <li class="feature-item">High contrast for accessibility (minimum 4.5:1 ratio)</li>
+                <li class="feature-item">Comfortable tap targets (minimum 44x44pt)</li>
+                <li class="feature-item">Premium yet approachable aesthetic</li>
+                <li class="feature-item">Focus on scannability and quick actions</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zennity - Stacking Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="notch"></div>
+
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="status-bar-left">9:41</div>
+            <div class="status-bar-right">
+                <span>📶</span>
+                <span>📡</span>
+                <span>🔋</span>
+            </div>
+        </div>
+
+        <!-- Main Screen -->
+        <div class="screen">
+            <!-- Navigation Header -->
+            <div class="nav-header">
+                <span class="back-arrow">←</span>
+                <h2 class="nav-title">Stacking Calculator</h2>
+            </div>
+
+            <!-- Input Section -->
+            <div class="card" style="margin-top: 0;">
+                <div class="input-group">
+                    <label class="input-label">Purchase Amount</label>
+                    <input type="text" class="input-large" value="₹ 5,000">
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label">Merchant Category</label>
+                    <select class="dropdown">
+                        <option>E-commerce (Amazon, Flipkart)</option>
+                        <option>Grocery & Supermarket</option>
+                        <option>Dining & Restaurants</option>
+                        <option>Travel & Hotels</option>
+                        <option>Fuel Stations</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-primary btn-full">Calculate Best Combo</button>
+            </div>
+
+            <!-- Results Hero -->
+            <div class="card gradient-purple results-hero">
+                <div class="results-label">Total Savings</div>
+                <div class="results-value">₹ 625</div>
+                <div class="results-subtitle">12.5% return</div>
+            </div>
+
+            <!-- Recommended Stack Section -->
+            <h3 class="heading">🎯 Recommended Stack</h3>
+
+            <!-- Step Card 1 -->
+            <div class="card-compact border-left-green">
+                <div class="step-label">STEP 1</div>
+                <div class="step-action">Buy Big Basket GC via Tata Neu</div>
+                <div class="step-value">+5% Neu Coins = ₹250</div>
+            </div>
+
+            <!-- Step Card 2 -->
+            <div class="card-compact border-left-purple">
+                <div class="step-label">STEP 2</div>
+                <div class="step-action">Use HDFC Regalia on Tata Neu</div>
+                <div class="step-value">+4% Rewards = ₹200</div>
+            </div>
+
+            <!-- Step Card 3 -->
+            <div class="card-compact border-left-orange">
+                <div class="step-label">STEP 3</div>
+                <div class="step-action">Use Big Basket GC on purchase</div>
+                <div class="step-value">+3.5% Portal Cashback = ₹175</div>
+            </div>
+
+            <!-- Alternative Options -->
+            <h3 class="heading">🔄 Alternative Options</h3>
+
+            <div class="card-compact">
+                <div class="flex-between mb-sm">
+                    <h4 style="font-size: 14px; font-weight: 600;">Direct HDFC Smartbuy</h4>
+                    <span style="font-size: 13px; font-weight: 600; color: var(--success-green);">
+                        ₹500
+                    </span>
+                </div>
+                <p class="small-text" style="color: var(--text-tertiary);">
+                    Simpler • 10% return
+                </p>
+            </div>
+
+            <div class="card-compact">
+                <div class="flex-between mb-sm">
+                    <h4 style="font-size: 14px; font-weight: 600;">SBI Cashback Card Direct</h4>
+                    <span style="font-size: 13px; font-weight: 600; color: var(--text-secondary);">
+                        ₹250
+                    </span>
+                </div>
+                <p class="small-text" style="color: var(--text-tertiary);">
+                    Easiest • 5% return
+                </p>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <div class="nav-item nav-item-inactive">
+                <div class="nav-icon">🏠</div>
+                <div class="nav-label">Feed</div>
+            </div>
+            <div class="nav-item nav-item-inactive">
+                <div class="nav-icon">💳</div>
+                <div class="nav-label">Cards</div>
+            </div>
+            <div class="nav-item nav-item-active">
+                <div class="nav-icon">🏷️</div>
+                <div class="nav-label">Offers</div>
+            </div>
+            <div class="nav-item nav-item-inactive">
+                <div class="nav-icon">✅</div>
+                <div class="nav-label">Tracker</div>
+            </div>
+            <div class="nav-item nav-item-inactive">
+                <div class="nav-icon">👤</div>
+                <div class="nav-label">Profile</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
