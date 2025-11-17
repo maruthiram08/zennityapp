@@ -14,7 +14,13 @@ npm start
 
 Scan the QR code with your phone's camera (iOS) or Expo Go app (Android), and the app loads instantly!
 
+**First Time Login:**
+- Enter any 10-digit phone number (e.g., 1234567890)
+- Use OTP: **123456** (mock auth for testing)
+- You're in! 🎉
+
 📖 **For detailed setup instructions, see [SETUP_GUIDE.md](./SETUP_GUIDE.md)**
+🔥 **For Firebase setup (production), see [FIREBASE_SETUP.md](./FIREBASE_SETUP.md)**
 
 ## 🚀 Tech Stack
 
@@ -26,9 +32,10 @@ Scan the QR code with your phone's camera (iOS) or Expo Go app (Android), and th
 - **UI:** Custom components based on design system
 - **Icons:** @expo/vector-icons
 
-### Backend (Ready for Integration)
-- **Firebase Auth:** Email/Phone authentication
-- **Firestore:** Cloud database
+### Backend
+- **Firebase Auth:** Phone authentication (SMS OTP) ✅ Implemented
+- **Mock Auth:** Development mode (no Firebase needed) ✅ Working
+- **Firestore:** Cloud database (ready for integration)
 - **Storage:** AsyncStorage + MMKV for local caching
 
 ### Development Tools
@@ -45,7 +52,13 @@ Scan the QR code with your phone's camera (iOS) or Expo Go app (Android), and th
 ✅ State management with Zustand stores
 ✅ Sample data for development
 ✅ Bottom tab navigation with 5 tabs
-✅ **All 5 screens fully built:**
+✅ **Phone Authentication with OTP (NEW!)**
+  - **Welcome Screen** - Onboarding with features ✅
+  - **Phone Login** - Enter 10-digit phone number ✅
+  - **OTP Verification** - 6-digit OTP input with auto-fill ✅
+  - **Mock Auth** - Works without Firebase for testing (OTP: 123456) ✅
+  - **Sign Out** - Secure logout functionality ✅
+✅ **All 5 main screens fully built:**
   - **Feed Screen** - Browse deals with filter chips ✅
   - **Cards Portfolio** - Card management with gradients ✅
   - **Offers Browser** - Trending offers by category ✅
