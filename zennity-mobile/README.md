@@ -4,6 +4,18 @@
 
 A production-ready credit card deals tracking application built with React Native and Expo, targeting credit card enthusiasts in India.
 
+## 🏃 Quick Start
+
+```bash
+cd zennity-mobile
+npm install
+npm start
+```
+
+Scan the QR code with your phone's camera (iOS) or Expo Go app (Android), and the app loads instantly!
+
+📖 **For detailed setup instructions, see [SETUP_GUIDE.md](./SETUP_GUIDE.md)**
+
 ## 🚀 Tech Stack
 
 ### Frontend
@@ -26,21 +38,19 @@ A production-ready credit card deals tracking application built with React Nativ
 
 ## 📱 Features
 
-### Implemented
+### ✅ Fully Implemented & Working
 ✅ Complete design system (colors, typography, spacing)
 ✅ TypeScript models for all entities (Deal, Card, Tracker, User, Calculator)
-✅ Reusable UI components (Button, Badge, Card, ProgressBar, FilterChip)
+✅ Reusable UI components (Button, Badge, Card, ProgressBar, FilterChip, DealCard)
 ✅ State management with Zustand stores
 ✅ Sample data for development
-✅ Navigation types and structure
-
-### Screens (Ready to Implement)
-1. **Feed Screen** - Browse credit card deals with filters
-2. **Cards Portfolio** - Manage your credit cards
-3. **Offers Browser** - Explore offers by category
-4. **Tracker** - Track progress on active deals
-5. **Stacking Calculator** - Calculate max returns
-6. **Profile/Settings** - User preferences
+✅ Bottom tab navigation with 5 tabs
+✅ **All 5 screens fully built:**
+  - **Feed Screen** - Browse deals with filter chips ✅
+  - **Cards Portfolio** - Card management with gradients ✅
+  - **Offers Browser** - Trending offers by category ✅
+  - **Tracker** - Progress tracking with progress bars ✅
+  - **Profile** - User settings and stats ✅
 
 ## 🎨 Design System
 

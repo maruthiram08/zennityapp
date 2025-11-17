@@ -36,7 +36,7 @@ export const useCardsStore = create<CardsState>((set, get) => ({
   toggleWatch: cardId =>
     set(state => ({
       cards: state.cards.map(card =>
-        card.id === cardId ? { ...deal, isWatching: !card.isWatching } : card
+        card.id === cardId ? { ...card, isWatching: !card.isWatching } : card
       ),
     })),
 }));
