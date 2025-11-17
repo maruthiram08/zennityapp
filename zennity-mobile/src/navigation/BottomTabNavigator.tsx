@@ -1,4 +1,5 @@
 import React from 'react';
+import { Text } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { RootTabParamList } from './types';
 import { Theme } from '@constants/theme';
@@ -9,6 +10,7 @@ import CardsScreen from '@screens/CardsScreen';
 import OffersScreen from '@screens/OffersScreen';
 import TrackerScreen from '@screens/TrackerScreen';
 import ProfileScreen from '@screens/ProfileScreen';
+import { AdminNavigator } from './AdminNavigator';
 
 const Tab = createBottomTabNavigator<RootTabParamList>();
 
@@ -77,6 +79,15 @@ export const BottomTabNavigator = () => {
         options={{
           tabBarIcon: ({ color }) => <Text style={{ fontSize: 24 }}>👤</Text>,
           headerShown: false,
+        }}
+      />
+      <Tab.Screen
+        name="Admin"
+        component={AdminNavigator}
+        options={{
+          tabBarIcon: ({ color }) => <Text style={{ fontSize: 24 }}>⚙️</Text>,
+          headerShown: false,
+          tabBarLabel: 'Admin',
         }}
       />
     </Tab.Navigator>
