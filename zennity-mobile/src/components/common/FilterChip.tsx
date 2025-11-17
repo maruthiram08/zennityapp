@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, Text, StyleSheet, ViewStyle } from 'react-native';
+import { TouchableOpacity, Text, StyleSheet, ViewStyle, Platform } from 'react-native';
 import { Theme } from '@constants/theme';
 
 interface FilterChipProps {
@@ -23,25 +23,39 @@ export const FilterChip: React.FC<FilterChipProps> = ({ label, active = false, o
 
 const styles = StyleSheet.create({
   chip: {
-    paddingHorizontal: Theme.spacing.lg,
-    paddingVertical: Theme.spacing.sm,
-    borderRadius: Theme.borderRadius.pill,
-    borderWidth: 1,
+    height: 40,
+    paddingHorizontal: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 20,
+    borderWidth: 1.5,
   },
   chipActive: {
     backgroundColor: Theme.colors.primary,
     borderColor: Theme.colors.primary,
+    ...Platform.select({
+      ios: {
+        shadowColor: Theme.colors.primary,
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.3,
+        shadowRadius: 4,
+      },
+      android: {
+        elevation: 2,
+      },
+    }),
   },
   chipInactive: {
     backgroundColor: Theme.colors.surface,
     borderColor: Theme.colors.border,
   },
   text: {
-    fontSize: Theme.fontSizes.md,
-    fontWeight: Theme.fontWeights.semibold,
+    fontSize: 15,
+    fontWeight: '600',
   },
   textActive: {
     color: Theme.colors.textWhite,
+    fontWeight: '700',
   },
   textInactive: {
     color: Theme.colors.textSecondary,
