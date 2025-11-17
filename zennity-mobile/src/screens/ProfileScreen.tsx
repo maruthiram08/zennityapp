@@ -1,13 +1,45 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, SafeAreaView, StatusBar, Switch } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, SafeAreaView, StatusBar, Switch, Alert } from 'react-native';
 import { Card } from '@components/common/Card';
 import { Button } from '@components/common/Button';
 import { Theme } from '@constants/theme';
+import { useAuthStore } from '@store';
 
 const ProfileScreen = () => {
-  const [pushEnabled, setPushEnabled] = React.useState(true);
-  const [dealAlerts, setDealAlerts] = React.useState(true);
-  const [weeklyDigest, setWeeklyDigest] = React.useState(false);
+  const { user, signOut, isLoading } = useAuthStore();
+  const [pushEnabled, setPushEnabled] = React.useState(user?.preferences.pushNotificationsEnabled ?? true);
+  const [dealAlerts, setDealAlerts] = React.useState(user?.preferences.dealAlerts ?? true);
+  const [weeklyDigest, setWeeklyDigest] = React.useState(user?.preferences.weeklyDigest ?? false);
+
+  const handleSignOut = () => {
+    Alert.alert(
+      'Sign Out',
+      'Are you sure you want to sign out?',
+      [
+        { text: 'Cancel', style: 'cancel' },
+        {
+          text: 'Sign Out',
+          style: 'destructive',
+          onPress: async () => {
+            try {
+              await signOut();
+            } catch (error: any) {
+              Alert.alert('Error', error.message || 'Failed to sign out');
+            }
+          },
+        },
+      ]
+    );
+  };
+
+  const formatPhoneNumber = (phone: string | undefined) => {
+    if (!phone) return 'Not set';
+    const cleaned = phone.replace(/\D/g, '');
+    if (cleaned.startsWith('91')) {
+      return `+91 ${cleaned.slice(2, 5)} ${cleaned.slice(5, 8)} ${cleaned.slice(8)}`;
+    }
+    return phone;
+  };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -29,8 +61,8 @@ const ProfileScreen = () => {
               <Text style={styles.avatarText}>👤</Text>
             </View>
             <View style={styles.userDetails}>
-              <Text style={styles.userName}>Card Enthusiast</Text>
-              <Text style={styles.userEmail}>user@example.com</Text>
+              <Text style={styles.userName}>{user?.displayName || 'Card Enthusiast'}</Text>
+              <Text style={styles.userEmail}>{formatPhoneNumber(user?.phone)}</Text>
             </View>
           </View>
         </Card>
@@ -110,11 +142,12 @@ const ProfileScreen = () => {
         </Card>
 
         <Button
-          title="Sign Out"
-          onPress={() => {}}
+          title={isLoading ? 'Signing Out...' : 'Sign Out'}
+          onPress={handleSignOut}
           variant="secondary"
           fullWidth
           style={styles.signOutButton}
+          loading={isLoading}
         />
 
         <Text style={styles.version}>Version 1.0.0</Text>
