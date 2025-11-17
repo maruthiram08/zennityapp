@@ -4,9 +4,13 @@ import { Card } from '@components/common/Card';
 import { Button } from '@components/common/Button';
 import { Theme } from '@constants/theme';
 import { useAuthStore } from '@store';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../navigation/types';
 
 const ProfileScreen = () => {
   const { user, signOut, isLoading } = useAuthStore();
+  const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
   const [pushEnabled, setPushEnabled] = React.useState(user?.preferences.pushNotificationsEnabled ?? true);
   const [dealAlerts, setDealAlerts] = React.useState(user?.preferences.dealAlerts ?? true);
   const [weeklyDigest, setWeeklyDigest] = React.useState(user?.preferences.weeklyDigest ?? false);
@@ -130,6 +134,9 @@ const ProfileScreen = () => {
         <Text style={styles.sectionTitle}>⚙️ Account</Text>
         <Card compact>
           <Text style={styles.menuItem}>Edit Profile</Text>
+        </Card>
+        <Card compact onPress={() => navigation.navigate('OffersManagement')}>
+          <Text style={styles.menuItem}>🎯 Manage Offers</Text>
         </Card>
         <Card compact>
           <Text style={styles.menuItem}>Privacy Settings</Text>

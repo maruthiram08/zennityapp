@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import { ActivityIndicator, View, StyleSheet } from 'react-native';
-import { BottomTabNavigator } from './src/navigation/BottomTabNavigator';
+import { RootNavigator } from './src/navigation/RootNavigator';
 import { AuthNavigator } from './src/navigation/AuthNavigator';
 import { useAuthStore } from './src/store';
 import { Theme } from './src/constants/theme';
@@ -46,7 +46,7 @@ export default function App() {
     <NavigationContainer>
       <StatusBar style="dark" />
       {isAuthenticated ? (
-        <BottomTabNavigator />
+        <RootNavigator />
       ) : (
         <AuthNavigator onAuthComplete={handleAuthComplete} />
       )}

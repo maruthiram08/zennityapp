@@ -10,4 +10,5 @@ export type RootStackParamList = {
   MainTabs: undefined;
   CardDetail: { cardId: string };
   StackingCalculator: undefined;
+  OffersManagement: undefined;
 };
