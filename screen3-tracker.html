@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zennity - My Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="notch"></div>
+
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="status-bar-left">9:41</div>
+            <div class="status-bar-right">
+                <span>📶</span>
+                <span>📡</span>
+                <span>🔋</span>
+            </div>
+        </div>
+
+        <!-- Main Screen -->
+        <div class="screen">
+            <h1 class="large-title">My Tracker</h1>
+
+            <!-- Tab Switcher -->
+            <div class="tab-switcher">
+                <button class="tab tab-active">Active</button>
+                <button class="tab tab-inactive">Calendar</button>
+                <button class="tab tab-inactive">Portfolio</button>
+            </div>
+
+            <!-- Active Deals Section -->
+            <h3 class="heading">🎯 Active Deals (3)</h3>
+
+            <!-- Progress Card 1 -->
+            <div class="card">
+                <div class="flex-between mb-sm">
+                    <h4 style="font-size: 15px; font-weight: 600;">HDFC Payzapp Offer</h4>
+                    <span style="font-size: 12px; font-weight: 600; color: var(--primary-orange);">
+                        2 days left
+                    </span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 50%;"></div>
+                </div>
+                <p style="font-size: 13px; color: var(--text-secondary); margin-top: 8px;">
+                    2 of 4 transactions complete
+                </p>
+            </div>
+
+            <!-- Progress Card 2 -->
+            <div class="card">
+                <div class="flex-between mb-sm">
+                    <h4 style="font-size: 15px; font-weight: 600;">Axis Magnus Welcome Bonus</h4>
+                    <span style="font-size: 12px; font-weight: 600; color: var(--success-green);">
+                        45 days left
+                    </span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 75%;"></div>
+                </div>
+                <p style="font-size: 13px; color: var(--text-secondary); margin-top: 8px;">
+                    ₹3L of ₹4L spending done
+                </p>
+            </div>
+
+            <!-- Progress Card 3 -->
+            <div class="card">
+                <div class="flex-between mb-sm">
+                    <h4 style="font-size: 15px; font-weight: 600;">ICICI Coral Cashback</h4>
+                    <span style="font-size: 12px; font-weight: 600; color: var(--warning-orange);">
+                        7 days left
+                    </span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 33%;"></div>
+                </div>
+                <p style="font-size: 13px; color: var(--text-secondary); margin-top: 8px;">
+                    1 of 3 milestones reached
+                </p>
+            </div>
+
+            <!-- Upcoming Actions Section -->
+            <h3 class="heading">📅 Upcoming Actions</h3>
+
+            <!-- Calendar Item 1 -->
+            <div class="card-compact calendar-item">
+                <div class="calendar-info">
+                    <div class="calendar-title">Chase Sapphire Application</div>
+                    <div class="calendar-date">Eligible in 18 days</div>
+                </div>
+                <span class="badge badge-green">Ready Soon</span>
+            </div>
+
+            <!-- Calendar Item 2 -->
+            <div class="card-compact calendar-item">
+                <div class="calendar-info">
+                    <div class="calendar-title">HDFC Regalia Annual Fee</div>
+                    <div class="calendar-date">Due in 45 days</div>
+                </div>
+                <span class="badge badge-orange">Action Needed</span>
+            </div>
+
+            <!-- Calendar Item 3 -->
+            <div class="card-compact calendar-item">
+                <div class="calendar-info">
+                    <div class="calendar-title">Marriott Points Expiry</div>
+                    <div class="calendar-date">90 days remaining</div>
+                </div>
+                <span class="badge badge-green">Tracked</span>
+            </div>
+
+            <!-- Add Goal Button -->
+            <button class="btn btn-primary btn-full mt-lg">+ Add New Goal</button>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <div class="nav-item nav-item-inactive">
+                <div class="nav-icon">🏠</div>
+                <div class="nav-label">Feed</div>
+            </div>
+            <div class="nav-item nav-item-inactive">
+                <div class="nav-icon">💳</div>
+                <div class="nav-label">Cards</div>
+            </div>
+            <div class="nav-item nav-item-inactive">
+                <div class="nav-icon">🏷️</div>
+                <div class="nav-label">Offers</div>
+            </div>
+            <div class="nav-item nav-item-active">
+                <div class="nav-icon">✅</div>
+                <div class="nav-label">Tracker</div>
+            </div>
+            <div class="nav-item nav-item-inactive">
+                <div class="nav-icon">👤</div>
+                <div class="nav-label">Profile</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
